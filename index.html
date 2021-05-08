@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Tutorial</title>
+</head>
+
+<body>
+    <p class="odd">this is body1</p>
+    <p id="second">this is body2</p>
+    <p class="odd">this is body3</p>
+    <p>this is body4</p>
+
+    <div id="wiki">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tempora laboriosam, ratione veritatis officia magnam earum cum assumenda quisquam ipsa eligendi eius sit natus non beatae, impedit repellat iste alias facilis amet. Necessitatibus, voluptatem. Eos, blanditiis sequi qui maiores velit voluptate laboriosam enim nam cupiditate dolores vitae repudiandae iste provident dignissimos inventore. Quibusdam, fugiat quasi, aliquid hic tenetur reiciendis aspernatur expedita, amet vel fugit culpa?
+    </div>
+    <button id="but">Submit</button>
+
+    <form>
+        <input id='inp' type="text">
+        <textarea id='ta'> this is your value my text area</textarea>
+        
+    </form>
+</body>
+<!-- ---------------------- Downloaded Jquery------------------------ -->
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<!-- ---------------------------------------CDN ------------------------------  -->
+
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script> -->
+<script>
+    $(document).ready(function () {
+        //your jquery function here......
+        console.log('hi there')
+        console.log($)
+
+        // --------------------------------Syntex of JQuery -------------------
+        // $("Selector").action() 
+        //--------functions in Jquery-------------------------------
+        //$('p').click() //click on p
+
+
+
+        // $('p').click(function () {
+        //     console.log('you clicked on p') // do this when we click on p
+        // })
+
+
+
+
+        // $('p').hide();
+        //  $(this).hide();
+
+        //(#id).hide();
+        //(.class).hide();
+
+    })
+
+//there are mainly three type of selector in JQuery
+//1.)Element selector, 2.)ID selector, 3.)Class Selector
+//1.)Element Selector: This is an example of element selector which click on app p
+    // $('p').click()
+
+//2.)ID Selector: This is an example of id selector which click on app p
+    // $('#second').click();
+
+//3.)Class Selector: This is an example of class selector which click on app p
+    $('.odd').click();
+
+
+//Other Seectors:
+    $("*").click()// clicks on all the elements
+
+    $('p.odd').click() //will click on all the p havin class odd
+    $('p:first').click() //will click on first p element
+
+
+    //....................................events in jquery...................................................
+    //Mouse Events: click, dblclick, mouseenter, mouseleave
+    //keyboard Event : keypress, keydown, keyup events, mediaKeyStatusMap
+    //form events=submit, change, focus, blur
+    //document/window events: load, resize, scroll, unload
+    //
+   //1.)double click:
+//    $('p').dblclick(function () {
+//             console.log('you double clicked on p') // do this when we double click on p
+//         })
+
+
+    //2.)Mouse Enter:
+    // $('p').mouseenter(function () {
+    //         console.log('you Mouse enter on p') // do this when we enter on p
+    //     })
+
+
+    // ......................ON Method ..............................................
+
+    // $('p').on({
+    //     click:function(){
+    //         console.log('thanks for clicking');
+    //     },
+    //     mouseleave:function(){
+    //         console.log('mouseleave')
+    //     }
+    // })  //you can attach any number of events usin on events.
+
+// ................Hide and shows method.................................... 
+//  1.)Hide 
+        //$('#wiki').hide()             //we can use two aruments with this function as well.
+
+        //$('#wiki').hide(1000)    //will take 1 sec to hide
+
+        // $('#wiki').hide(1000,function(){
+        //     console.log('hidden')
+        // })
+
+        // .......toggle()............................................. 
+        $('#but').click(function(){
+            $('#wiki').toggle(1000)
+        })
+
+
+        // .........................slide Method (speed and call back method are optional).........................
+        // $('#wiki').slideUp(1000)
+        // $('#wiki').slideDown(1000)
+        // $('#wiki').slideToggle(1000)
+
+
+        // ................................................................................................. 
+
+        // Animate function in jQuery
+    // $('#wiki').animate({
+    //     opacity:0.3,
+    //     height: '150px',
+    //     width:'350px'
+
+    // }, "fast")
+
+
+    
+    // $('#wiki').animate({ opacity: 0.3 }, 4000);
+    // $('#wiki').animate({ opacity: 0.9 }, 1000);
+    // $('#wiki').animate({ width: '350px' }, 12000);
+
+    // $('#ta').val('setting it to harry');
+    // $('#ta').html('setting it to harry');
+    // $('#ta').html('setting it to harry3');
+    // $('#inp').html('setting it to harry3');
+    // $('#inp').val('setting it to harry3');
+    // $('#inp').empty()
+    // $('#wiki').empty()
+    // $('#wiki').text('you are good')
+    // $('#wiki').remove()
+
+    //     $('#wiki').addClass('myclass')
+    // $('#wiki').addClass('myclass2')
+    // $('#wiki').removeClass('myclass2')
+    // $('#wiki').css('background-color', 'red')
+    // $('#wiki').css('background-color')
+
+    // AJAX Using jQuery
+    // $.get('https://code.jquery.com/jquery-3.3.1.js', function (data, status) { alert(data); })
+
+    // $.get('https://code.jquery.com/jquery-3.3.1.js', function (data, status) { alert(status); })
+
+    // $.post('https://code.jquery.com/jquery-3.3.1.js',
+    //     { name: 'harry', channel: 'code with harry' },
+    //     function (data, status) { alert(status) });
+
+
+
+</script>
+
+</html>
